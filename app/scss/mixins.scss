@@ -1,0 +1,13 @@
+@mixin flexRule($justifyContent: flex-start, $alignItems: flex-start, $flexDirection: row) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-direction: $flexDirection;
+}
+
+@mixin fontMontserrat($fontSize, $fontWeight){
+    font-family: 'Montserrat', sans-serif;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    text-decoration: none;
+}
