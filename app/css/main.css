@@ -6,9 +6,6 @@
           box-sizing: border-box;
 }
 
-body {
-}
-
 header {
   display: -webkit-box;
   display: -webkit-flex;
