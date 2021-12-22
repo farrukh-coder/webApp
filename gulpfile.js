@@ -70,6 +70,7 @@ gulp.task('prebuild', async function() {
 
 	var buildCss = gulp.src([
 		'app/css/main.css',
+		'app/css/media.css',
 		'app/css/libs.min.css'
 		])
 	.pipe(gulp.dest('dist/css'))
