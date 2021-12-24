@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebApp</title>
+    <title>Создание сайтов</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
-    
+
     <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 </head>
@@ -230,11 +230,15 @@
         <section class="form" id="form">
             <article class="form-send">
                 <h2>Заявка</h2>
-                <input type="text" placeholder="Ваше имя">
-                <input type="mail" placeholder="Ваш номер телефона">
-                <input type="text" placeholder="Сообщение">
 
-                <button type="submit">Отправить <img src="img/link-arrow-light.svg"></button>
+                <input type="text" placeholder="Ваше имя" name="name" id="name">
+                <input type="mail" placeholder="Ваш номер телефона" name="phone_number" id="phone_number">
+                <input type="text" placeholder="Сообщение" name="message" id="message">
+
+                <button type="button" id="send">Отправить <img src="img/link-arrow-light.svg"></button>
+                
+                
+                
 
             </article>
             <article class="price-card" id="price-card">
@@ -262,6 +266,12 @@
     </main>
 
     <section class="modals">
+        <div class="sendSuccess">
+            <div>
+                <img src="img/success.svg" alt="">
+                <p>Ваша заявка принята!</p>
+            </div>
+        </div>
         <div class="first-tariff">
             <h2>Landing Page</h2>
             <button>X</button>
@@ -378,6 +388,7 @@
         </section>
     </footer>
 
+    <script src="js/form.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/sidebar.js"></script>
     <script src="js/scroll.js"></script>
