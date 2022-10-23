@@ -487,8 +487,12 @@
 
     .form-send {
         input {
-            width: 100%;
+            width: 100% !important;
         }
+    }
+    
+    .iti{
+        width: 100%;
     }
 
     footer {

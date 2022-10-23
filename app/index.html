@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Создание сайтов</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/media.css">
-
+    
+    <title>Создание сайтов. Личное Портфолио</title>
+    
     <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/intlTelInput.css">
+
+    
 </head>
 
 <body>
@@ -32,14 +37,14 @@
                     <a href="index.html">Главная</a>
                     <!-- <a href="#">О команде</a> -->
                     <a href="portfolio.html">Портфолио</a>
-                    <a href="#offers" class="none-link">Что мы предлагаем</a>
+                    <a href="#offers">Что мы предлагаем</a>
                     <a href="#price-card">Специальное предложение</a>
                 </div>
                 <a href="#form" class="special-link">Оставить заявку <img src="img/link-arrow-light.svg" alt=""></a>
                 <div class="social">
                     <a href="https://t.me/farrukhnosirov"><img src="img/social/telegram.svg" alt=""></a>
-                    <a href="#"><img src="img/social/vk.svg" alt=""></a>
-                    <a href="#"><img src="img/social/instagram.svg" alt=""></a>
+                    <!-- <a href="#"><img src="img/social/vk.svg" alt=""></a> -->
+                    <!-- <a href="#"><img src="img/social/instagram.svg" alt=""></a> -->
                     <a href="mailto:farrukh_nosirov@internet.ru"><img src="img/social/mail.svg" alt=""></a>
                     <a href="tel:+998933750945"><img src="img/social/phone-call.svg" alt=""></a>
                 </div>
@@ -54,14 +59,13 @@
                 <h2>Добро пожаловать!</h2>
                 <div class="about-content enable-about-content">
                     <p>
-                        Приветствую. Меня зовут Фаррух. Я веб-разработчик. Занимаюсь созданием, продвижением и
-                        поддержкой сайтов
+                        Приветствую. Меня зовут Фаррух. Я веб-разработчик. Занимаюсь созданием, доработкой и поддержкой сайтов.
                     </p>
                     <p>
                         Создам сайт для вас и вашего бизнеса. Любого типа и сложности.
                     </p>
                     <p>
-                        Анимации. Эффекты. Адаптивность. Оптимизированность. Дёшево. Быстро. Качественно
+                        <b>Адаптация под все возможные устройства. Красивые анимации. Оптимизированность.</b>
                     </p>
                 </div>
 
@@ -154,7 +158,7 @@
         </section>
 
         <section id="offers" class="offers">
-            <h2>Что мы предлагаем</h2>
+            <h2>Наши преимущества</h2>
             <div class="offer-block">
                 <div class="offer-item">
                     <img src="img/offers/1.svg" alt="">
@@ -167,24 +171,20 @@
                     <p>
                         Гарантируем качество работы
                     </p>
-
                 </div>
                 <div class="offer-item">
                     <img src="img/offers/3.svg" alt="">
                     <p>
                         Выполним работу быстро
                     </p>
-
                 </div>
                 <div class="offer-item">
                     <img src="img/offers/4.svg" alt="">
                     <p>
                         Форма обратной связи
                     </p>
-
                 </div>
                 <div class="offer-item">
-
                     <img src="img/offers/7.svg" alt="">
                     <p>
                         Напишем чистый код
@@ -196,7 +196,7 @@
 
         <section class="benefits">
             <div class="benefits-inside">
-                <h2>Наши преимущества</h2>
+                <h2>Что мы предлагаем</h2>
                 <article>
                     <img src="img/benefits/1.svg" alt="">
                     <p>
@@ -231,14 +231,11 @@
             <article class="form-send">
                 <h2>Заявка</h2>
 
-                <input type="text" placeholder="Ваше имя" name="name" id="name">
-                <input type="mail" placeholder="Ваш номер телефона" name="phone_number" id="phone_number">
+                <input typetggt="text" placeholder="Ваше имя" name="name" id="name">
+                <input type="tel" placeholder="Ваш номер телефона" name="phone_number" id="phone_number" class="form-control"  autocomplete="off" data-intl-tel-input-id="0">
                 <input type="text" placeholder="Сообщение" name="message" id="message">
 
                 <button type="button" id="send">Отправить <img src="img/link-arrow-light.svg"></button>
-                
-                
-                
 
             </article>
             <article class="price-card" id="price-card">
@@ -246,20 +243,20 @@
                 <div class="card">
                     <h3>Landing Page</h3>
                     <p class="card-info">Продающий сайт</p>
-                    <span>3 000 000 сум</span>
-                    <p class="price">1 000 000 сум</p>
+                    <span>от 200 $</span>
+                    <p class="price">от 100 $</p>
                 </div>
                 <div class="card">
                     <h3>Cайт-визитка</h3>
                     <p class="card-info">Личный сайт</p>
-                    <span>5 000 000 сум</span>
-                    <p class="price">2 500 000 сум</p>
+                    <span>от 400 $</span>
+                    <p class="price">от 250 $</p>
                 </div>
                 <div class="card">
                     <h3>Бизнес сайт</h3>
                     <p class="card-info">Корпоративный сайт</p>
-                    <span>7 000 000 сум</span>
-                    <p class="price">3 000 000 сум</p>
+                    <span>от 800 $</span>
+                    <p class="price">от 500 $</p>
                 </div>
             </article>
         </section>
@@ -389,11 +386,14 @@
     </footer>
 
     <script src="js/form.js"></script>
-    <script src="js/jquery.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/intlTelInput-jquery.min.js"></script>
     <script src="js/sidebar.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/switch.js"></script>
     <script src="js/offers.js"></script>
+    <script src="js/mask.js"></script>
     <script src="js/modal.js"></script>
 </body>
 

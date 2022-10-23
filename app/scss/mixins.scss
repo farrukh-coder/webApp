@@ -11,3 +11,17 @@
     font-weight: $fontWeight;
     text-decoration: none;
 }
+
+@mixin fontBalsamiqSans($fontSize, $fontWeight){
+    font-family: 'Balsamiq Sans', sans-serif;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    text-decoration: none;
+}
+
+@mixin fontComfortaa($fontSize, $fontWeight){
+    font-family: 'Comfortaa', sans-serif;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    text-decoration: none;
+}

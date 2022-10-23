@@ -1,9 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+/* Полоса прокрутки (ScrollBar) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1f25;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(135, 135, 135, 0);
 }
 
 .offers-mobile {
@@ -33,7 +47,8 @@ header.index {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  height: 680px;
+  min-height: 680px;
+  height: 100vh;
   background: url("../img/bg.jpg");
   background-size: cover;
   overflow-x: hidden;
@@ -82,13 +97,15 @@ header nav {
   color: #f0f8ff;
 }
 .header-content h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 3.3em;
   font-weight: 400;
   text-decoration: none;
+  line-height: 1.3;
+  text-align: center;
 }
 .header-content p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 1em;
   font-weight: 500;
   text-decoration: none;
@@ -119,6 +136,7 @@ header nav {
   text-decoration: none;
   padding: 15px 30px;
   border: 1px solid #f0f8ff;
+  border-radius: 5px;
   color: #f0f8ff;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -334,13 +352,13 @@ section.about aside {
   padding: 0 100px;
 }
 section.about aside h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 1.8em;
   font-weight: 500;
   text-decoration: none;
   margin-bottom: 30px;
   grid-column: 1/2;
-  text-align: right;
+  text-align: left;
   align-self: flex-end;
 }
 section.about aside .about-content {
@@ -350,11 +368,14 @@ section.about aside .about-content {
   text-decoration: none;
   grid-row: 2/3;
   grid-column: 1/2;
-  text-align: right;
+  text-align: left;
   opacity: 0;
 }
 section.about aside .about-content p {
   margin: 30px 0;
+}
+section.about aside .about-content p b {
+  font-weight: 600;
 }
 section.about aside .enable-about-content {
   -webkit-transition: 1s ease;
@@ -419,7 +440,7 @@ section.portfolio .portfolio-content {
   grid-template-rows: 1fr 1fr;
 }
 section.portfolio .portfolio-content h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 1.8em;
   font-weight: 500;
   text-decoration: none;
@@ -512,7 +533,7 @@ section.offers {
   text-align: center;
 }
 section.offers h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 1.8em;
   font-weight: 500;
   text-decoration: none;
@@ -631,7 +652,7 @@ section.benefits {
           backdrop-filter: blur(15px);
 }
 .benefits-inside h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 1.8em;
   font-weight: 500;
   text-decoration: none;
@@ -704,7 +725,7 @@ section.form {
   background: url(../img/form-bg.jpg) center/cover;
 }
 .form-send h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 1.8em;
   font-weight: 500;
   text-decoration: none;
@@ -731,6 +752,9 @@ section.form {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+}
+.form-send input#phone_number {
+  padding-left: 110px;
 }
 .form-send input::-webkit-input-placeholder {
   color: #f0f8ff;
@@ -798,6 +822,100 @@ section.form {
           transform: rotate(90deg);
 }
 
+.select {
+  position: relative;
+}
+
+.select select {
+  display: block;
+  width: 100%;
+  /* от ширины блока div */
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  /* отступы от текста до рамки */
+  background: none;
+  /* убираем фон */
+  border: 1px solid #ccc;
+  /* рамка */
+  border-radius: 3px;
+  /* скругление полей формы */
+  -webkit-appearance: none;
+  /* Chrome */
+  -moz-appearance: none;
+  /* Firefox */
+  appearance: none;
+  /* убираем дефолнтные стрелочки */
+  font-family: inherit;
+  /* наследует от родителя */
+  font-size: 1rem;
+  color: #444;
+}
+
+.select:after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #000 transparent transparent transparent;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  z-index: 1;
+  margin-top: -3px;
+}
+
+.select:after {
+  content: " url(...) ";
+}
+
+.select select {
+  background: url(...) no-repeat;
+}
+
+.errorForm {
+  background: rgba(255, 0, 0, 0.6) !important;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-animation-name: errorLeftRight;
+          animation-name: errorLeftRight;
+  -webkit-animation-duration: 0.15s;
+          animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
+
+@-webkit-keyframes errorLeftRight {
+  0% {
+    -webkit-transform: translateX(7px);
+            transform: translateX(7px);
+  }
+  50% {
+    -webkit-transform: translateX(-7px);
+            transform: translateX(-7px);
+  }
+  100% {
+    -webkit-transform: translateX(7px);
+            transform: translateX(7px);
+  }
+}
+
+@keyframes errorLeftRight {
+  0% {
+    -webkit-transform: translateX(7px);
+            transform: translateX(7px);
+  }
+  50% {
+    -webkit-transform: translateX(-7px);
+            transform: translateX(-7px);
+  }
+  100% {
+    -webkit-transform: translateX(7px);
+            transform: translateX(7px);
+  }
+}
 .price-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -811,7 +929,7 @@ section.form {
   color: #f0f8ff;
 }
 .price-card h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 1.8em;
   font-weight: 400;
   text-decoration: none;
@@ -1109,7 +1227,7 @@ footer {
 .first-tariff h2,
 .second-tariff h2,
 .third-tariff h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 2.5em;
   font-weight: 400;
   text-decoration: none;
@@ -1184,7 +1302,7 @@ header.portfolio-page .p-header-inside {
   color: #f0f8ff;
 }
 header.portfolio-page .p-header-inside h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 2em;
   font-weight: 700;
   text-decoration: none;
@@ -1201,7 +1319,7 @@ header.portfolio-page .p-header-inside h1 {
 
 .main-p-page {
   width: 100%;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .about-p {
